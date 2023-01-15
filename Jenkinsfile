@@ -8,7 +8,7 @@ node {
     bat "${mvnHome}/bin/mvn clean install"
   }
 
-  stage("Tests and Deployment") {
+  stage("Testing") {
     def mvnHome = tool name: 'Maven', type: 'maven'
     bat "${mvnHome}/bin/mvn test" 
   }
