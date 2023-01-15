@@ -3,14 +3,14 @@ node {
     git branch: 'master', url: 'https://github.com/archie252000/JavaDevopsAssignment'
   }
 
-  stage("Compilation") {
+  stage("Building") {
     def mvnHome = tool name: 'Maven', type: 'maven'
     bat "${mvnHome}/bin/mvn clean install"
   }
 
   stage("Tests and Deployment") {
     stage("Runing unit tests") {
-      sh "./mvnw test -Punit"
+      bat ".${mvnHome}/bin/mvn test -Punit"
     }
     
   }
