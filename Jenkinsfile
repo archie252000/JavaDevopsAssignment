@@ -4,7 +4,7 @@ node {
   }
 
   stage("Compilation") {
-  bat "mvn https://github.com/archie252000/JavaDevopsAssignment/pom.xml compile"
+  bat "mvn JavaDevopsAssignment/pom.xml compile"
   }
 
   stage("Tests and Deployment") {
