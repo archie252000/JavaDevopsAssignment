@@ -4,7 +4,7 @@ node {
   }
 
   stage("Compilation") {
-  bat "mvn -f pom.xml compile"
+    sh "./mvnw clean install -DskipTests"
   }
 
   stage("Tests and Deployment") {
