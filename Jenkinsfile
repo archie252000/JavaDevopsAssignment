@@ -4,7 +4,7 @@ node {
   }
 
   stage("Compilation") {
-    sh "./mvnw clean install -DskipTests"
+  bat "mvn https://github.com/archie252000/JavaDevopsAssignment/pom.xml compile"
   }
 
   stage("Tests and Deployment") {
