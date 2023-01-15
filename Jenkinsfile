@@ -4,7 +4,7 @@ node {
   }
 
   stage("Compilation") {
-  bat "mvn JavaDevopsAssignment/pom.xml compile"
+  bat "mvn -f pom.xml compile"
   }
 
   stage("Tests and Deployment") {
