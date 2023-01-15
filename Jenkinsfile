@@ -9,9 +9,7 @@ node {
   }
 
   stage("Tests and Deployment") {
-    stage("Runing unit tests") {
-      bat ".${mvnHome}/bin/mvn test -Punit"
-    }
-    
+    def mvnHome = tool name: 'Maven', type: 'maven'
+    bat ".${mvnHome}/bin/mvn test" 
   }
 }
