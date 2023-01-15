@@ -4,7 +4,7 @@ node {
   }
 
   stage("Compilation") {
-    sh "mvn clean install"
+    bat "mvn clean install"
   }
 
   stage("Tests and Deployment") {
